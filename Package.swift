@@ -2,14 +2,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "RSBarcodes_Swift",
+    name: "BarcodeGenerator",
     platforms: [.iOS(.v8)],
     products: [
-        .library(name: "RSBarcodes_Swift", targets: ["RSBarcodes_Swift"]),
+        .library(name: "BarcodeGenerator", targets: ["BarcodeGenerator"]),
     ],
     targets: [
         .target(
-            name: "RSBarcodes_Swift",
+            name: "BarcodeGenerator",
             path: "Source"
         ),
     ]

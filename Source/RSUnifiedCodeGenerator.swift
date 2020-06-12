@@ -10,15 +10,13 @@ import Foundation
 import UIKit
 import AVFoundation
 
-open class RSUnifiedCodeGenerator: RSCodeGenerator {
+open class BarcodeGenerator: RSCodeGenerator {
     
     open var isBuiltInCode128GeneratorSelected = false
     open var fillColor: UIColor = UIColor.white
     open var strokeColor: UIColor = UIColor.black
     
-    open class var shared: RSUnifiedCodeGenerator {
-        return UnifiedCodeGeneratorSharedInstance
-    }
+    public static var shared: BarcodeGenerator = BarcodeGenerator()
     
     // MARK: RSCodeGenerator
     
@@ -88,5 +86,3 @@ open class RSUnifiedCodeGenerator: RSCodeGenerator {
         return self.generateCode(machineReadableCodeObject, inputCorrectionLevel: .Medium)
     }
 }
-
-let UnifiedCodeGeneratorSharedInstance = RSUnifiedCodeGenerator()
